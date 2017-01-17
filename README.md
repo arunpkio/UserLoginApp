@@ -8,3 +8,4 @@ This demo app has following feature implemented.
 * User login
 * Password retrievel
 
+Icons used in this app are from Font Awesome [http://fontawesome.io/icons/]
