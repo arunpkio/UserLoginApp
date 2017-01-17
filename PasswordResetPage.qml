@@ -9,6 +9,37 @@ Page {
         color: backGroundColor
     }
 
+    footer: ToolBar {
+        background:
+            Rectangle {
+            implicitHeight: 50
+            implicitWidth: 200
+            color: "transparent"
+        }
+
+        RowLayout {
+            anchors.fill: parent
+            ToolButton {
+                id: control
+                font.family: "fontawesome"
+                text: qsTr("\uf060")
+                font.pointSize: 24
+                rightPadding: 10
+                contentItem: Text {
+                    text: control.text
+                    font: control.font
+                    opacity: enabled ? 1.0 : 0.3
+                    color: mainTextCOlor
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                }
+                onClicked: logoutSession()
+            }
+            Item { Layout.fillWidth: true }
+        }
+    }
+
     Text {
         id: resetText
         text: qsTr("Retrieve Password")
@@ -136,16 +167,6 @@ Page {
 
         Item {
             height: 20
-        }
-
-        CButton{
-            height: 50
-            Layout.preferredWidth: parent.width - 20
-            Layout.alignment: Qt.AlignHCenter
-            name: "Cancel"
-            baseColor: "transparent"
-            borderColor: mainAppColor
-            onClicked: logoutSession()
         }
     }
 
