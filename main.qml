@@ -10,7 +10,7 @@ ApplicationWindow {
     visible: true
     width: 420
     height: 680
-    title: qsTr("Login Demo")
+    title: qsTr("Login Demo")    
 
     property color backGroundColor : "#394454"
     property color mainAppColor: "#6fda9c"
@@ -204,7 +204,6 @@ ApplicationWindow {
     function forgotPassword()
     {
         stackView.replace("qrc:/PasswordResetPage.qml")
-        //        showAllUsers()
     }
 
     // Show all users
