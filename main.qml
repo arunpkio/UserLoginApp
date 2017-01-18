@@ -10,7 +10,7 @@ ApplicationWindow {
     visible: true
     width: 420
     height: 680
-    title: qsTr("Login Demo")    
+    title: qsTr("Login Demo")
 
     property color backGroundColor : "#394454"
     property color mainAppColor: "#6fda9c"
@@ -28,12 +28,6 @@ ApplicationWindow {
         id: stackView
         focus: true
         anchors.fill: parent
-        Keys.onPressed: {
-            if (event.key === Qt.Key_A) {
-                console.log('Key A was pressed');
-                event.accepted = true;
-            }
-        }
     }
 
     // After loading show initial Login Page
@@ -181,7 +175,6 @@ ApplicationWindow {
             else
             {
                 pword = results.rows.item(0).password
-                console.log(results.rows.item(0).password)
             }
         })
         return pword
