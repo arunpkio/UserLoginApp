@@ -1,6 +1,12 @@
 // backend.js
 .pragma library
 
+/*
+  Validate the input credential
+  Return values are..
+  0 - Success
+  1 - credentials are empty
+*/
 function validateUserCredentials(uname, pword)
 {
     var ret
