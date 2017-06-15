@@ -49,7 +49,7 @@ ApplicationWindow {
             implicitHeight: 60
             color: popupBackGroundColor
         }
-        y: rootWindow.height
+        y: (rootWindow.height - 60)
         modal: true
         focus: true
         closePolicy: Popup.CloseOnPressOutside
