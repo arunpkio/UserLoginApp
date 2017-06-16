@@ -15,6 +15,8 @@ ApplicationWindow {
     property color backGroundColor : "#394454"
     property color mainAppColor: "#6fda9c"
     property color mainTextCOlor: "#f0f0f0"
+    property color popupBackGroundColor: "#b44"
+    property color popupTextCOlor: "#ffffff"
     property var dataBase
 
     FontLoader {
@@ -45,9 +47,9 @@ ApplicationWindow {
         background: Rectangle {
             implicitWidth: rootWindow.width
             implicitHeight: 60
-            color: "#b44"
+            color: popupBackGroundColor
         }
-        y: rootWindow.height
+        y: (rootWindow.height - 60)
         modal: true
         focus: true
         closePolicy: Popup.CloseOnPressOutside
@@ -55,7 +57,7 @@ ApplicationWindow {
             id: message
             anchors.centerIn: parent
             font.pointSize: 12
-            color: "#ffffff"
+            color: popupTextCOlor
         }
         onOpened: popupClose.start()
     }
